@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Akanksha Gupta | Technical Writing Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+            margin-bottom: 50px;
+        }
+        
+        .resume-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .resume-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .resume-section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child,
+        .education-item:last-child,
+        .project-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .item-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .item-company {
+            font-size: 1.1rem;
+            color: #3498db;
+            font-weight: 500;
+        }
+        
+        .item-date {
+            font-style: italic;
+            color: #666;
+            white-space: nowrap;
+        }
+        
+        .item-description {
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .item-description ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category h3 {
+            color: #3498db;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .skill-list li {
+            padding: 0.25rem 0;
+            color: #555;
+        }
+        
+        .download-btn {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .download-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        @media print {
+            .navbar, .download-btn {
+                display: none;
+            }
+            
+            .resume-container {
+                margin-top: 0;
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .download-btn {
+                position: static;
+                display: block;
+                margin: 1rem auto;
+                width: fit-content;
+            }
+            
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .item-date {
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Akanksha Gupta</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <button class="download-btn" onclick="window.print()">
+        <i class="fas fa-download"></i> Download PDF
+    </button>
+
+    <div class="resume-container">
+        <header class="resume-header">
+            <h1>Akanksha Gupta</h1>
+            <h2>Technical Writing Manager</h2>
+            <div style="margin-top: 1rem;">
+                <p><i class="fas fa-envelope"></i> akanksha.gupta@email.com</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fab fa-linkedin"></i> linkedin.com/in/akankshaa</p>
+                <p><i class="fab fa-github"></i> github.com/akanksha-gupta</p>
+            </div>
+        </header>
+
+        <section class="resume-section">
+            <h2>Professional Summary</h2>
+            <p>Experienced Technical Writing Manager with 6+ years of expertise in leading documentation teams and implementing enterprise-scale content strategies. Proven track record of building high-performing teams, architecting DITA XML frameworks, and driving documentation excellence across complex technical products. Specialized in team leadership, process optimization, and strategic content operations that enhance developer experience and user adoption.</p>
+        </section>
+
+        <section class="resume-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Leadership & Management</h3>
+                    <ul class="skill-list">
+                        <li>Team Leadership & Development</li>
+                        <li>Strategic Planning</li>
+                        <li>Performance Management</li>
+                        <li>Cross-functional Collaboration</li>
+                        <li>Budget Management</li>
+                        <li>Stakeholder Engagement</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Documentation Strategy</h3>
+                    <ul class="skill-list">
+                        <li>DITA XML Architecture</li>
+                        <li>Content Strategy & Governance</li>
+                        <li>Information Architecture</li>
+                        <li>Documentation Operations</li>
+                        <li>Process Optimization</li>
+                        <li>Quality Assurance</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Technical Expertise</h3>
+                    <ul class="skill-list">
+                        <li>API Documentation</li>
+                        <li>Docs-as-Code Workflows</li>
+                        <li>Developer Experience</li>
+                        <li>Content Analytics</li>
+                        <li>Automation & CI/CD</li>
+                        <li>Regulatory Compliance</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <ul class="skill-list">
+                        <li>DITA-OT & Oxygen Author</li>
+                        <li>Confluence & JIRA</li>
+                        <li>Git & GitHub Actions</li>
+                        <li>Figma & Adobe Creative</li>
+                        <li>Analytics Platforms</li>
+                        <li>Project Management Tools</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Technical Writing Manager</div>
+                        <div class="item-company">Enterprise Software Solutions</div>
+                    </div>
+                    <div class="item-date">January 2023 - Present</div>
+                </div>
+                <div class="item-description">
+                    <ul>
+                        <li>Lead team of 8 technical writers supporting 15+ product lines across enterprise software portfolio</li>
+                        <li>Implemented company-wide DITA XML framework resulting in 45% reduction in content maintenance overhead</li>
+                        <li>Established content governance policies and style guides ensuring consistency across all documentation</li>
+                        <li>Collaborated with VP of Engineering and Product to align documentation strategy with business objectives</li>
+                        <li>Managed $400K annual budget for documentation tools, training, and team development initiatives</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Senior Technical Writer</div>
+                        <div class="item-company">TechFlow Solutions</div>
+                    </div>
+                    <div class="item-date">March 2021 - December 2022</div>
+                </div>
+                <div class="item-description">
+                    <ul>
+                        <li>Led documentation strategy for enterprise software products serving 100K+ developers globally</li>
+                        <li>Architected DITA XML framework and mentored 3 junior writers on structured authoring methodologies</li>
+                        <li>Established docs-as-code workflows using Git and automated publishing pipelines improving deployment efficiency by 60%</li>
+                        <li>Collaborated with engineering teams to implement API documentation automation reducing manual effort by 70%</li>
+                        <li>Conducted user research and analytics implementation resulting in 40% improvement in content discoverability</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Technical Writer</div>
+                        <div class="item-company">Digital Innovation Labs</div>
+                    </div>
+                    <div class="item-date">June 2019 - February 2021</div>
+                </div>
+                <div class="item-description">
+                    <ul>
+                        <li>Created comprehensive API documentation, user guides, and developer tutorials for SaaS platform</li>
+                        <li>Implemented DITA XML authoring system enabling content reuse across multiple product documentation sets</li>
+                        <li>Developed information architecture and content taxonomy improving user task completion rates by 50%</li>
+                        <li>Collaborated with UX team to integrate contextual help and in-app guidance reducing support tickets by 35%</li>
+                        <li>Established technical writing best practices and style guide adopted across the organization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Documentation Specialist</div>
+                        <div class="item-company">Healthcare Tech Corp</div>
+                    </div>
+                    <div class="item-date">August 2018 - May 2019</div>
+                </div>
+                <div class="item-description">
+                    <ul>
+                        <li>Developed technical documentation for FDA-regulated medical software ensuring compliance with regulatory standards</li>
+                        <li>Created training materials and user documentation for healthcare professionals using complex medical devices</li>
+                        <li>Collaborated with clinical teams and regulatory affairs to ensure accuracy and compliance of all documentation</li>
+                        <li>Implemented structured authoring workflows improving documentation review and approval processes</li>
+                        <li>Conducted usability testing on documentation leading to 30% improvement in user task success rates</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Featured Projects</h2>
+            
+            <div class="project-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Enterprise Documentation Transformation</div>
+                        <div class="item-company">Team Leadership, DITA Implementation</div>
+                    </div>
+                    <div class="item-date">2023</div>
+                </div>
+                <div class="item-description">
+                    <p>Led organization-wide documentation transformation initiative, scaling team from 3 to 8 writers while implementing enterprise DITA framework. Established governance policies, automated workflows, and training programs resulting in 45% efficiency improvement and $200K annual cost savings.</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Developer Experience Initiative</div>
+                        <div class="item-company">Cross-functional Leadership, API Documentation</div>
+                    </div>
+                    <div class="item-date">2022</div>
+                </div>
+                <div class="item-description">
+                    <p>Spearheaded company-wide developer documentation initiative collaborating with engineering leadership. Redesigned API documentation, implemented interactive tutorials, and established feedback systems improving developer satisfaction scores by 75% and reducing integration time by 40%.</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Technical Writing Academy</div>
+                        <div class="item-company">Training Development, Mentorship Program</div>
+                    </div>
+                    <div class="item-date">2021</div>
+                </div>
+                <div class="item-description">
+                    <p>Established internal training program for technical writers, creating comprehensive curriculum for DITA authoring, API documentation, and advanced writing techniques. Program achieved 90% internal promotion rate and reduced new hire onboarding time by 50%.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Bachelor of Arts in English & Communications</div>
+                        <div class="item-company">University of Technology</div>
+                    </div>
+                    <div class="item-date">2015 - 2019</div>
+                </div>
+                <div class="item-description">
+                    <p><strong>Relevant Coursework:</strong> Technical Writing, Digital Media, Information Design, Research Methods, Professional Communication, Content Strategy</p>
+                    <p><strong>GPA:</strong> 3.8/4.0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Certifications</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 0.5rem;"><strong>Certified Manager of Technical Communication (CMTC)</strong> (2024)</li>
+                <li style="margin-bottom: 0.5rem;"><strong>DITA Specialist Certification</strong> - OASIS (2023)</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Certified Professional Technical Communicator (CPTC)</strong> (2022)</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Project Management Professional (PMP)</strong> (2022)</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Structured Authoring with DITA</strong> - DITA North America (2021)</li>
+            </ul>
+        </section>
+
+        <section class="resume-section">
+            <h2>Awards & Achievements</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 0.5rem;">🏆 <strong>Manager of the Year</strong> - Enterprise Software Solutions (2024)</li>
+                <li style="margin-bottom: 0.5rem;">🥇 <strong>Excellence in Documentation Leadership</strong> - TechFlow Solutions (2022)</li>
+                <li style="margin-bottom: 0.5rem;">🎯 <strong>Innovation in Technical Communication</strong> - STC Competition (2021)</li>
+                <li style="margin-bottom: 0.5rem;">📚 <strong>Outstanding Team Development</strong> - Digital Innovation Labs (2020)</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
